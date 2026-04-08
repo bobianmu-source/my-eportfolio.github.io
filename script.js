@@ -235,8 +235,8 @@ showSlides(slideIndex);
 // Start the automatic slideshow
 startSlideShow();
 
-const form = document.getElementById('portfolio-contact-form');
-const result = document.getElementById('form-result');
+const portfolioForm = document.getElementById('portfolio-contact-form');
+const formResult = document.getElementById('form-result');
 
 form.addEventListener('submit', function(e) {
   // Prevent the default HTML form submission
