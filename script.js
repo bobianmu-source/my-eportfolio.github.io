@@ -58,7 +58,7 @@ window.addEventListener("scroll", () => {
 // ===============================
 const footer = document.querySelector("footer p:last-child"); // Target last p
 if (footer) {
-  footer.innerHTML = `Created by Twala Timothy Lemiso. &copy; ${new Date().getFullYear()}`;
+  footer.innerHTML = `Created by Bob Ian Muga. &copy; ${new Date().getFullYear()}`;
 }
 
 // ===============================

@@ -107,7 +107,7 @@ main section {
 
 /* Banner Image Section */
 #bannerImage {
-  background-image: url("WhatsApp Image 2025-11-11 at 08.45.252.jpeg");
+  background-image: url("Screenshot\ 2025-05-16\ 224230.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -153,11 +153,11 @@ main section {
 
 /* About Section */
 #About {
-  background-image: url("WhatsApp Image 2025-11-11 at 19.19.34.jpeg");
+  background-image: url("20251121_112301.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 100vh; /* Changed from 250vh */
+  min-height: 120vh; /* Changed from 250vh */
   display: flex;
   justify-content: center; /* center horizontally */
   align-items: flex-end; /* push content to bottom */
@@ -180,7 +180,7 @@ main section {
   padding: 40px 20px;
 
   /* --- Add/Modify these lines for the background image --- */
-  background-image: url('WhatsApp Image 2025-11-11 at 19.19.35.jpeg'); /* <--- CHANGE THIS TO YOUR IMAGE PATH */
+  background-image: url('20250828_155942.jpg'); /* <--- CHANGE THIS TO YOUR IMAGE PATH */
   background-size: cover;        /* Ensures the image covers the entire section */
   background-position: center;   /* Centers the image */
   background-repeat: no-repeat;  /* Prevents the image from tiling */
@@ -214,7 +214,7 @@ main section {
 /* For dark mode, you might want to adjust the overlay or image */
 body.dark-mode #services {
   /* You could use a different image for dark mode, or adjust the overlay */
-  background-image: url('your-service-background-dark.jpg'); /* Optional: different dark mode image */
+  background-image: url('20250903_132313.jpg'); /* Optional: different dark mode image */
 }
 body.dark-mode #services .content-wrapper {
   background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for dark mode */
