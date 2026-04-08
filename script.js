@@ -234,3 +234,53 @@ showSlides(slideIndex);
 
 // Start the automatic slideshow
 startSlideShow();
+
+const form = document.getElementById('portfolio-contact-form');
+const result = document.getElementById('form-result');
+
+form.addEventListener('submit', function(e) {
+  // Prevent the default HTML form submission
+  e.preventDefault();
+  
+  // Provide user feedback that it's sending
+  result.textContent = "Sending...";
+
+  // Gather the data
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+
+  // Send the data asynchronously
+  fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+      },
+      body: json
+  })
+  .then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+          result.textContent = "Message sent successfully!";
+          result.style.color = "green";
+      } else {
+          console.log(response);
+          result.textContent = json.message;
+          result.style.color = "red";
+      }
+  })
+  .catch(error => {
+      console.log(error);
+      result.textContent = "Something went wrong!";
+      result.style.color = "red";
+  })
+  .then(function() {
+      // Clear the form fields after submission
+      form.reset();
+      // Hide the success message after 5 seconds
+      setTimeout(() => {
+          result.textContent = "";
+      }, 5000);
+  });
+});
